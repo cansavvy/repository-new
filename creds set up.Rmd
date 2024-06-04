@@ -1,0 +1,59 @@
+---
+title: "GitHub Workflow"
+output: html_document
+date: "2024-06-04"
+---
+
+## Steps for linking GitHub to Posit Cloud 
+
+```{r}
+install.packages("usethis")
+library("usethis")
+```
+
+
+```{r}
+
+usethis::create_github_token()
+gitcreds::gitcreds_set()
+use_git_config(user.name = "cansavvy", user.email = "cansav09@gmail.com")
+```
+
+
+```{r}
+git_sitrep()
+```
+
+
+## Rundown on GitHub vocab 
+
+Repository = house for your project files
+Cloning = Making a copy of the repository for posit cloud (or wherever you are working)
+Personal Access Token = A key or fancy password to give us access to GitHub 
+Commit = Adding some file changes to a branch 
+Pushing = A transfer of files from where we are working to GitHub 
+
+
+## Creating a pull request
+
+Create a new branch to work from. (that's different than the default main branch). 
+
+```{r}
+pr_init(branch = "new-branch")
+```
+
+Make a file change (and save it). 
+
+In the Git tab, check the "staged" box next to the file change you made. 
+
+Click the commit button. 
+Write a descriptive commit message. 
+Click "commit". Now we can close this window. 
+
+```{r}
+pr_push()
+```
+
+This will open up a window in Github that creates a pull request. 
+
+Pull Request = Its a method to suggest changes to the files
