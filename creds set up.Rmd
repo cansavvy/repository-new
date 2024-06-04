@@ -1,0 +1,46 @@
+---
+title: "Testing"
+output: html_document
+date: "2024-06-04"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Steps for linking GitHub to Posit Cloud 
+
+```{r}
+install.packages("usethis")
+library("usethis")
+```
+
+
+```{r}
+
+usethis::create_github_token()
+gitcreds::gitcreds_set()
+use_git_config(user.name = "cansavvy", user.email = "cansav09@gmail.com")
+```
+
+
+```{r}
+git_sitrep()
+```
+
+
+### Rundown on GitHub vocab 
+
+
+Repository = house for your project files
+Cloning = Making a copy of the repository for posit cloud (or wherever you are working)
+Personal Access Token = A key or fancy password to give us access to GitHub 
+Commit = Adding some file changes to a branch 
+Pushing = A transfer of files from where we are working to GitHub 
+
+
+### Creating a pull request
+
+```{r}
+pr_init(branch = "new-branch")
+```
