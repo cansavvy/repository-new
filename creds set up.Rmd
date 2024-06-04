@@ -41,6 +41,20 @@ Pushing = A transfer of files from where we are working to GitHub
 
 ### Creating a pull request
 
+Create a new branch to work from. (that's different than the default main branch). 
+
 ```{r}
 pr_init(branch = "new-branch")
+```
+
+Make a file change (and save it). 
+
+In the Git tab, check the "staged" box next to the file change you made. 
+
+Click the commit button. 
+Write a descriptive commit message. 
+Click "commit". Now we can close this window. 
+
+```{r}
+pr_push()
 ```
