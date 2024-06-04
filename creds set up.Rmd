@@ -56,3 +56,4 @@ pr_push()
 
 This will open up a window in Github that creates a pull request. 
 
+Pull Request = Its a method to suggest changes to the files
